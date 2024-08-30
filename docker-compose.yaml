@@ -1,0 +1,32 @@
+version: '3.8'
+
+services:
+  postgres:
+    container_name: api-devops
+    image: postgres
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: 123
+      POSTGRES_DB: api-devops
+      PGDATA: /data/postgres
+    volumes:
+      - ./data/pg:/data/postgres
+    networks:
+      - primeira-network
+
+  api-test:
+    build:
+      context: .
+    container_name: api-test
+    ports:
+      - 3333:3333
+    depends_on:
+      - postgres
+    networks:
+      - primeira-network
+
+networks:
+  primeira-network:
+    driver: bridge
