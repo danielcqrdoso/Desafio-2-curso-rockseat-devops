@@ -1,8 +1,8 @@
-Passo 1: 
-  Instalar o yarn
-Passo 2:
-  rode docker-compose up
-Passo 3:
-  Para ver se está tundo funcionando rode
-  docker exec -it api-test bash
-  ping postgres
+Passo 1: </br>
+  Instalar o yarn </br>
+Passo 2: </br>
+  rode docker-compose up </br>
+Passo 3: </br>
+  Para ver se está tundo funcionando rode </br>
+  docker exec -it api-test bash </br>
+  ping postgres </br>
